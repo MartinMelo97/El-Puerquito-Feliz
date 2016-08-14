@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>El Puerquito Veloz</title>
+	<script type="text/javascript" src="jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="JS/main.js"></script>
+	<script type="text/javascript" src="jQuery/jquery.mobile-1.4.1.min.js"></script>
+    <script type="text/javascript" src="JS/Database.js"></script>
+	<link rel="stylesheet" type="text/css" href="jQuery/jquery.mobile-1.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/Estilos.css">
+</head>
+<body>
+<div data-role="page" id="main">
+		<div data-role="header" data-theme="f" class = "ui-body-f">
+			<h1 class="bigger">El Puerquito Veloz</h1>
+		</div>
+		<div data-role="main" data-theme="h" class="ui-bar-h divhacerpedido">
+		  <p class="texto">Por favor llena el siguiente formulario para enviar tu pedido</p>
+		  <div data-role="fieldcontain">
+          	<label for="Nombre" class="texto">Nombre: </label>
+		    <input type="text" name="Nombre" id="Nombre" placeholder="Introduce tu nombre"/>
+	      </div>
+		  <div data-role="fieldcontain">
+		    <label for="Telefono" class="texto">Tel&eacute;fono &oacute; Celular:</label>
+		    <input type="number" name="Telefono" id="Telefono" placeholder="Introduce tu numero"  />
+	      </div>
+          <div data-role="fieldcontain">
+		    <label for="Direccion" class="texto">Direcci&oacute;n de env&iacute;o:</label>
+		    <input type="text" name="Direccion" id="Direccion" placeholder="Introduce la direcci&oacute;n a la que enviaremos tu pedido"  />
+	      </div>
+          <div data-role="fieldcontain">
+            <label for="TipoCarne" class="select texto">Opciones:</label>
+            <select name="TipoCarne" id="Carne">
+              <option value="Chamorro">Chamorro - $95.00</option>
+              <option value="Costilla">Costilla - $83.00</option>
+              <option value="Nana">Nana - $105.00</option>
+              <option value="Buche">Buche - $132.00</option>
+              <option value="Maciza">Maciza - $123.00</option>
+              <option value="Tripa">Tripa - $154.00</option>
+              <option value="Surtida">Surtida - $190.00</option>
+            </select>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="Kilos" class="texto">Kilos:</label>
+            <input type="range" name="Kilos" id="Kilos" value="1" min="1" max="50" />
+          </div>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <legend class="texto">M&eacute;todo de Pago:</legend>
+              <input type="radio" name="Pago" id="Efectivo" value="Efectivo" />
+              <label for="Efectivo" class="texto">Efectivo</label>
+              <input type="radio" name="Pago" id="Deposito" value="Deposito" />
+              <label for="Deposito" class="texto">Dep&oacute;sito</label>
+              <input type="radio" name="Pago" id="Tarjeta" value="Tarjeta" />
+              <label for="Tarjeta" class="texto">Tarjeta (cr&eacute;dito - d&eacute;bito)</label>
+              <input type="radio" name="Pago" id="Paypal" value="Paypal" />
+              <label for="Paypal" class="texto">Paypal</label>
+            </fieldset>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="Total" class="texto">Total</label>
+            <input type="text" name="Total" id="Total" value="" readonly placeholder="Total"  />
+          </div>
+          
+          <div data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" onClick="CalcularTotal()">Calcular total</a><a href="gracias.html" data-rel="external" data-role="button" onClick="insertar()">Realizar Pedido</a><a href="#" data-role="button" onClick="ResetAll()">Borrar todo</a></div>
+          
+    </div>
+    </div>
+</body>
+</html>

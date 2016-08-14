@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>El Puerquito Veloz</title>
+	<script type="text/javascript" src="jQuery/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="JS/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/Estilos.css">
+</head>
+<body>
+
+	<a href="#" onclick="dos();"><div class="cont-gen bePink" id="main">
+		<div class="center-logo"><h1 class="pink3 shadow">El Puerquito Veloz</h1></div>
+	</div></a>
+
+	<div class="cont-gen beGreen" id="menu">
+		<div class="center black bigger">
+			<ul>
+				<li class="boton n-margin-top"><a href="hacerPedido.html">Nuevo Pedido</a></li>
+				<!--<li class="boton margin-top"><a href="#">Buscar Sucursal</a></li>-->
+				<li class="boton margin-top"><a href="signIn.html">Ver Pedidos</a></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		function dos(){
+			var posicion2 = $("#menu").offset().top;
+			$("html, body").animate({
+				scrollTop: posicion2
+			}, 1200);
+		}
+		$(document).ready(function(){
+			var posicion = $("#main").offset().top;
+			$("html, body").animate({
+				scrollTop: posicion
+			}, 1500);
+			dos();
+		});
+	</script>
+</body>
+</html>
